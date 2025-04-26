@@ -1,0 +1,21 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environment folders
+env/
+venv/
+ENV/
+
+# Ignore Git-related files
+.git/
+
+# Ignore logs
+*.log
+
+# Ignore node_modules if any (for JS projects)
+node_modules/
+
+# Ignore any other unnecessary files (e.g., temp files)
+*.tmp
