@@ -1,5 +1,4 @@
-# Python
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request # type: ignore
 
 app = Flask(__name__)
 
@@ -11,6 +10,10 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route("/hello/<name>")
+def hello(name):
+    return f'Hello, {name}!'
+
 @app.route("/form")
 def form():
     return render_template("form.html")
@@ -21,4 +24,4 @@ def greet():
     return render_template("greet.html", name=name)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5001, debug=True)
